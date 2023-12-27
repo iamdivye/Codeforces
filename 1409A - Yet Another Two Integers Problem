@@ -1,0 +1,28 @@
+    import java.util.Scanner;
+    public class YetAnotherTwoIntegersProblem
+    {
+    	public static void main(String[] args)
+    	{
+    		int i,k=0,j,x;
+    		Scanner in = new Scanner(System.in);
+    		int n= in.nextInt();
+    		long[] a = new long[n];
+    		long[] b = new long[n];		
+    		for(i=0;i<n;i++)
+    		{
+    				a[i]=in.nextLong();
+    				b[i]=in.nextLong();
+    		}
+    		for(i=0;i<n;i++)
+    		{
+    			k=(int)Math.abs(a[i]-b[i]);
+    			if(k==0)
+    				x=0;
+    			else if(k%10 != 0)
+    			    x=k/10+1;
+    			else
+    				x=k/10;
+    			System.out.println(x);
+    		}
+    	}
+    }
