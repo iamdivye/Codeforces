@@ -1,0 +1,18 @@
+    import java.util.Scanner;
+    public class PetyaAndStrings 
+    {
+    	public static void main(String[] args) 
+    	{
+    		Scanner in = new Scanner(System.in);
+    		String n = in.next();
+    		String m = in.next();
+    		int a=0;
+    		a = n.compareToIgnoreCase(m);
+    		if(a == 0)
+    			System.out.println(0);
+    		else if(a>0)
+    			System.out.println(1);
+    		else
+    			System.out.println(-1);			
+    	}
+    }
