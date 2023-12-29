@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Borze 
+{
+	public static void main(String[] args) 
+    {
+		Scanner in = new Scanner(System.in);
+	    String a = in.next();
+	    String b="";
+	    int k=0,n=a.length();
+	    char c;
+	    while(k<n)
+	    {
+	    	c=a.charAt(k);
+	    	if(c == '.')
+	    		b = b + "0";
+	    	else
+	    	{
+	    		k++;
+	    		c=a.charAt(k);
+	    		if(c == '.')
+	    			b = b + "1";
+	    		else 
+	    			b = b + "2";
+	    	}
+	    	k++;
+	    }
+	    System.out.println(b);
+	}
+}
