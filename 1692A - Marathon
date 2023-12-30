@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class Marathon 
+{
+	public static void main(String[] args) 
+    {
+		int i,a,b,c,d;
+		Scanner in = new Scanner(System.in);
+		int t = in.nextInt();
+		int[] k = new int[t];
+	    for(i=0;i<t;i++)
+	    {
+	    	a = in.nextInt();
+		    b = in.nextInt();
+		    c = in.nextInt();
+		    d = in.nextInt();
+		    if(a>b && a>c && a>d)
+		    	k[i] = 0;
+		    else if(a<b && a<c && a<d)
+		    	k[i] = 3;
+		    else if((a>b && a>c && a<d) || (a>b && a<c && a>d) || (a<b && a>c && a>d))
+		    	k[i] = 1;
+		    else
+		    	k[i] = 2;
+	    }
+	    for(i=0;i<t;i++)
+	    	System.out.println(k[i]);
+	}
+}
