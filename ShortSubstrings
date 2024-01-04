@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class ShortSubstrings
+{
+	public static void main(String[] args) 
+	{
+		int i,k,j;
+		String S;
+		char l;
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		String[] a = new String[n];
+		for(i=0;i<n;i++)
+			a[i] = in.next();
+		for(i=0;i<n;i++)
+		{
+			if(a[i].length() > 3)
+			{
+				S="";
+				k = a[i].length();
+				for(j=0;j<k;j++)
+				{
+					l=a[i].charAt(j);
+					if(j==0 || j == k-1)
+						S = S +l;
+					else
+					{
+						if(l == a[i].charAt(j+1))
+						{
+							S= S+l;
+							j=j+1;
+						}
+					}
+				}
+				a[i] = S;
+			}
+		}
+		for(i=0;i<n;i++)
+			System.out.println(a[i]);
+	}
+}
