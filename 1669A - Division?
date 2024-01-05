@@ -1,0 +1,25 @@
+package codeforce;
+import java.util.Scanner;
+public class Division 
+{
+	public static void main(String[] args) 
+	{
+		int i;
+		Scanner in = new Scanner(System.in);
+		int t = in.nextInt();
+		int[] n = new int[t];
+		for(i=0;i<t;i++)
+			n[i] = in.nextInt();
+		for(i=0;i<t;i++)
+		{
+			if(n[i] >= 1900)
+				System.out.println("Division 1");
+			else if(n[i] >= 1600)
+				System.out.println("Division 2");
+			else if(n[i] >= 1400)
+				System.out.println("Division 3");
+			else 
+				System.out.println("Division 4");
+		}
+	}
+}
