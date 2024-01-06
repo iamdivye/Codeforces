@@ -1,0 +1,21 @@
+import java.util.*;
+public class CodeforcesChecking 
+{
+	public static void main(String[] args) 
+	{
+		int i;
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		String[] a = new String[n];
+		String s = "codeforces";
+		for(i=0;i<n;i++)
+			a[i] = in.next();
+		for(i=0;i<n;i++)
+		{
+			if(s.contains(a[i]))
+				System.out.println("YES");
+			else
+				System.out.println("NO");
+		}
+	}
+}
