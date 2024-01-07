@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class PlusOrMinus 
+{
+	public static void main(String[] args) 
+    {
+		Scanner in = new Scanner(System.in);
+	    int a = in.nextInt();
+	    int i,b,c,d;
+	    String[] k = new String[a];
+	    for(i=0;i<a;i++)
+	    {
+	    	b = in.nextInt();
+	    	c = in.nextInt();
+	    	d = in.nextInt();
+	    	if(b+c == d)
+	    	    k[i] = "+";
+	    	else
+	    		k[i] = "-";
+	    }
+	    for(i=0;i<a;i++)
+	    	System.out.println(k[i]);
+	}
+}
