@@ -1,0 +1,30 @@
+import java.util.*;
+public class BlackSquare 
+{
+	public static void main(String[] args) 
+	{
+		char ch;int S=0;
+		Scanner in = new Scanner(System.in);
+		int a = in.nextInt();
+		int b = in.nextInt();
+		int c = in.nextInt();
+		int d = in.nextInt();
+		String s = in.next();
+		for(int i=0;i<s.length();i++)
+		{
+			ch = s.charAt(i);
+			switch(ch)
+			{
+			    case '1' : S = S + a;
+			               break;
+			    case '2' : S = S + b;
+	                       break;
+			    case '3' : S = S + c;
+	                       break;
+			    case '4' : S = S + d;
+	                       break;
+			}
+		}
+		System.out.println(S);
+	}
+}
