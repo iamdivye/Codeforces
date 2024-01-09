@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class EvenArray 
+{
+	public static void main(String[] args) 
+	{
+		int i,j,k,s=0;
+		Scanner in = new Scanner(System.in);
+		int a = in.nextInt();
+		for(i=0;i<a;i++)
+		{
+			s=0;k=0;
+			int x = in.nextInt();
+			int[] n = new int[x];
+			for(j=0;j<x;j++)
+			{
+				n[j] = in.nextInt();
+				if(j%2 != n[j]%2)
+				{
+					k++;
+					if(n[j]%2 == 1)
+						s = s + 1;
+					else
+						s = s - 1;
+				}
+			}
+			if(s != 0)
+				System.out.println(-1);
+			else
+				System.out.println(k/2);
+		}
+	}
+}
