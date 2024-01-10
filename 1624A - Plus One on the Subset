@@ -1,0 +1,21 @@
+import java.util.*;
+public class PlusOneOnTheSubset 
+{
+	public static void main(String[] args) 
+	{
+		int i,j,k,S=0,s=0;
+		int[] a;
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		for(i=0;i<n;i++)
+		{
+			k = in.nextInt();
+			a = new int[k];
+			for(j=0;j<k;j++)
+				a[j] = in.nextInt();
+			S = Arrays.stream(a).max().getAsInt();
+			s = Arrays.stream(a).min().getAsInt();
+			System.out.println(S-s);
+		}
+	}
+}
