@@ -1,0 +1,21 @@
+    import java.util.*;
+    public class PolycarpAndCoins 
+    {
+    	public static void main(String[] args) 
+    	{
+    		int i,a,b,c;
+    		Scanner in = new Scanner(System.in);
+    		int n = in.nextInt();
+    		for(i=1;i<=n;i++)
+    		{
+    			a = in.nextInt();
+    			b=c=a/3;
+    			if(a%3 == 1)
+    				b++;
+    			else if(a%3 == 2)
+    				c++;
+    			System.out.println(b);
+    			System.out.println(c);
+    		}
+    	}
+    }
