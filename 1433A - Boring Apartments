@@ -1,0 +1,32 @@
+    import java.util.*;
+    public class BoringApartments 
+    {
+    	public static void main(String[] args)
+    	{
+    		int j,k,x,y=0,s=0,a;
+    		Scanner in = new Scanner(System.in);
+    		int n = in.nextInt();
+    		for(int i=1;i<=n;i++)
+    		{
+    			a=0;y=0;
+    			x = in.nextInt();
+    			for(j=1;j<=10;j++)
+    			{
+    				s=0;
+    				for(k=1;k<5;k++)
+    				{
+    					s = s*10+j;
+    					y = y+k;
+    					if(s == x)
+    					{
+    						a=1;
+    						break;
+    					}
+    				}
+    				if(a == 1)
+    					break;
+    			}
+    			System.out.println(y);
+    		}
+    	}
+    }
