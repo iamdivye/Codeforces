@@ -1,4 +1,3 @@
-package codeforce;
 import java.util.*;
 public class FloorNumber 
 {
