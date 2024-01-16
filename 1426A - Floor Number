@@ -1,0 +1,24 @@
+package codeforce;
+import java.util.*;
+public class FloorNumber 
+{
+	public static void main(String[] args) 
+	{
+		int i,a=0;
+		Scanner in = new Scanner(System.in);
+		int t = in.nextInt();
+		for(i=1;i<=t;i++)
+		{
+			int n = in.nextInt();
+			int x = in.nextInt();
+			n=n-2;
+			if(n<=0)
+				System.out.println(1);
+			else if(n%x == 0)
+				System.out.println(1+n/x);
+			else
+				System.out.println(2+n/x);
+		}
+	}
+
+}
