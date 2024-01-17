@@ -1,0 +1,37 @@
+package codeforce;
+import java.util.*;
+public class CardsForFriends 
+{
+	public static void main(String[] args) 
+	{
+		int i,a=0,h=0,k=0,w;
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		for(i=0;i<n;i++)
+		{
+			a = 1;
+			w = in.nextInt();
+			h = in.nextInt();
+			k = in.nextInt();
+			while(i>=0)
+			{
+				if(w%2 == 0)
+				{
+					w = w/2;
+					a = a*2;
+				}
+				else if(h%2 == 0)
+				{
+					h = h/2;
+					a = a*2;
+				}
+				else
+					break;
+			}
+			if(a >= k)
+				System.out.println("YES");
+			else
+				System.out.println("NO");
+		}
+	}
+}
