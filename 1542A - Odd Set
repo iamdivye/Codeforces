@@ -1,0 +1,26 @@
+import java.util.*;
+public class OddSet 
+{
+	public static void main(String[] args) 
+	{
+		int i,n,j,k=0;
+		Scanner in = new Scanner(System.in);
+		int t = in.nextInt();
+		int a;
+		for(i=1;i<=t;i++)
+		{
+			k=0;
+			n = in.nextInt();
+			for(j=0;j<2*n;j++)
+			{
+				a = in.nextInt();
+				if(a%2 == 0)
+					k++;
+			}
+			if(k == n)
+				System.out.println("Yes");
+			else
+				System.out.println("No");				
+		}
+	}
+}
