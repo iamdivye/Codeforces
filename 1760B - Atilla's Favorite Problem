@@ -1,0 +1,29 @@
+import java.util.*;
+public class AtillasFavoriteProblem 
+{
+	public static void main(String[] args) 
+	{
+		int i,n,m=0;
+		String s;
+		char c;
+		Scanner in = new Scanner(System.in);
+		int t = in.nextInt();
+		for(i=0;i<t;i++)
+		{
+			m = 0;
+			n = in.nextInt();
+			s = in.next().toUpperCase();
+			while(n>0)
+			{
+				c = s.charAt(n-1);
+				if(m < (int)c)
+				{
+					m = (int)c;					
+				}
+				n--;
+			}
+			System.out.println((m-64));
+		}
+	}
+
+}
