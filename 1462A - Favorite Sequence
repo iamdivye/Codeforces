@@ -1,0 +1,29 @@
+import java.util.*;
+public class FavoriteSequence 
+{
+	public static void main(String[] args) 
+	{
+		int i,k,a,j;
+		Scanner in = new Scanner(System.in);
+		int t = in.nextInt();
+		for(i=0;i<t;i++)
+		{
+			k = in.nextInt();
+			int[] x = new int[k];
+			for(a=0;a<k;a++)
+			{
+				x[a] = in.nextInt();
+			}
+			a=0;j=k-1;
+			while(a<j && a != j)
+			{
+				System.out.print(x[a]+" "+x[j]+" ");
+				a++;
+				j--;
+			}
+			if(k%2 != 0)
+				System.out.print(x[((k+1)/2)-1]);
+			System.out.println();
+		}
+	}
+}
