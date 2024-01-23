@@ -1,0 +1,27 @@
+import java.util.*;
+public class TwoElevators 
+{
+	public static void main(String[] args) 
+	{
+		int i, j, k,l,a,b,c;
+		Scanner in = new Scanner(System.in);
+		int t = in.nextInt();
+		for(i=0;i<t;i++)
+		{
+			a = in.nextInt();
+			b = in.nextInt();
+			c = in.nextInt();
+			a = a-1;
+			if(b>c)
+				k = b-1;
+			else
+				k = (c-b) + (c-1);
+			if(a == k)
+				System.out.println(3);
+			else if(a<k)
+				System.out.println(1);
+			else
+				System.out.println(2);				
+		}
+	}
+}
