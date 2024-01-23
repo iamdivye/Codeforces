@@ -1,0 +1,29 @@
+import java.util.*;
+public class ArrayWithOddSum 
+{
+	public static void main(String[] args) 
+	{
+		int i,n,a,s,e=0,o=0;
+		Scanner in = new Scanner(System.in);
+		int t = in.nextInt();
+		for(i=0;i<t;i++)
+		{
+			e=0;o=0;
+			n = in.nextInt();
+			for(a=0;a<n;a++)
+			{
+				s = in.nextInt();
+				if(s%2 == 0)
+					e++;
+				else
+					o = o + 1;
+			}
+			if(o == 0)
+				System.out.println("NO");
+			else if(e == 0 && (o%2) == 0)
+				System.out.println("NO");
+			else
+				System.out.println("YES");
+		}
+	}
+}
