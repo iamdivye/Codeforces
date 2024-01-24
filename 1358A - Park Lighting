@@ -1,0 +1,18 @@
+import java.util.*;
+public class ParkLighting 
+{
+	public static void main(String[] args) 
+	{
+		double i,j,k;
+		int g;
+		Scanner in = new Scanner(System.in);
+		int t = in.nextInt();
+		for(i=0;i<t;i++)
+		{
+			j = in.nextInt();
+			k = in.nextInt();
+			g = (int)Math.ceil((k*j)/2);
+			System.out.println(g);
+		}
+	}
+}
