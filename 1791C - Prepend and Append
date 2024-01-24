@@ -1,0 +1,38 @@
+import java.util.*;
+public class PrependAndAppend 
+{
+	public static void main(String[] args) 
+	{
+		int i,j,x;
+		String s;
+		Scanner in = new Scanner(System.in);
+		int t = in.nextInt();
+		for(i=0;i<t;i++)
+		{
+			j = in.nextInt()-1;
+			s = in.next();
+			x=0;
+			while(x!=j && x<j)
+			{
+				if(s.charAt(x) == '0' && s.charAt(j) == '1')
+				{
+					x++;
+					j--;
+				}
+				else if(s.charAt(x) == '1' && s.charAt(j) == '0')
+				{
+					x++;
+					j--;
+				}
+				else
+					break;
+			}
+			if(x == j)
+				System.out.println(1);
+			else if(x>j)
+				System.out.println(0);
+			else
+				System.out.println(j-x+1);
+		}
+	}
+}
