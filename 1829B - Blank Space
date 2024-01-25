@@ -1,0 +1,31 @@
+import java.util.*;
+public class BlankSpace 
+{
+	public static void main(String[] args) 
+	{
+		int i,a,j,k,l,x;
+		Scanner in = new Scanner(System.in);
+		int t = in.nextInt();
+		for(i=0;i<t;i++)
+		{
+			a = in.nextInt();
+			x=0;
+			l=0;
+			for(j=0;j<a;j++)
+			{
+				k = in.nextInt();
+				if(k == 0)
+				   l = l+1;
+				else
+				{
+					if(l>x)
+						x = l;
+					l=0;
+				}
+			}
+			if(l>x)
+				x = l;
+			System.out.println(x);
+		}
+	}
+}
