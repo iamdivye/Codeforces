@@ -1,0 +1,31 @@
+import java.util.*;
+public class CasimirStringSolitaire 
+{
+	public static void main(String[] args) 
+	{
+		int i,a,b,x=0,y=0,z=0;
+		String s;
+		char c;
+		Scanner in = new Scanner(System.in);
+		int t = in.nextInt();
+		for(i=0;i<t;i++)
+		{
+			x=0;y=0;z=0;
+			s = in.next();
+			for(a=0;a<s.length();a++)
+			{
+				c = s.charAt(a);
+				if(c == 'A')
+					x++;
+				else if(c == 'B')
+					y++;
+				else if(c == 'C')
+					z++;
+			}
+			if(y == (x+z))
+				System.out.println("YES");
+			else
+				System.out.println("NO");
+		}
+	}
+}
