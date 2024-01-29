@@ -1,0 +1,22 @@
+package codeforce;
+import java.util.*;
+public class Election 
+{
+	public static void main(String[] args) 
+	{
+		int i,a,b,c,A,B,C;
+		Scanner in = new Scanner(System.in);
+		int t = in.nextInt();
+		for(i=0;i<t;i++)
+		{
+			a = in.nextInt();
+			b = in.nextInt();
+			c = in.nextInt();
+		    A = Math.max(b - a + 1, Math.max(c - a + 1, 0));
+            B = Math.max(a - b + 1, Math.max(c - b + 1, 0));
+            C = Math.max(a - c + 1, Math.max(b - c + 1, 0));
+            System.out.println(A + " " + B + " " + C);
+		}
+	}
+
+}
