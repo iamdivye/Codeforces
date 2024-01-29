@@ -1,4 +1,3 @@
-package codeforce;
 import java.util.*;
 public class Election 
 {
@@ -18,5 +17,4 @@ public class Election
             System.out.println(A + " " + B + " " + C);
 		}
 	}
-
 }
