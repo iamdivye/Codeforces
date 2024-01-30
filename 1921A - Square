@@ -1,0 +1,39 @@
+package codeforce;
+import java.util.*;
+public class Square 
+{
+	public static void main(String[] args) 
+	{
+		int i, a,j,b,c,l;
+		int x[][]= new int[4][2];
+		Scanner in = new Scanner(System.in);
+		int t = in.nextInt();
+		for(a=0;a<t;a++)
+		{
+			for(i=0;i<4;i++)
+			{
+				for(j=0;j<2;j++)
+				{
+					x[i][j] = in.nextInt();
+				}
+			}
+			if(x[0][0] == x[1][0])
+			{
+				b = Math.abs(x[0][1] - x[1][1]);
+				if(x[0][1] == x[2][1])
+					l = Math.abs(x[0][0] - x[2][0]);
+				else
+					l = Math.abs(x[0][0] - x[3][0]);
+			}
+			else 
+			{
+				l = Math.abs(x[0][0] - x[1][0]);
+				if(x[0][0] == x[2][0])
+					b = Math.abs(x[0][1] - x[2][1]);
+				else
+					b = Math.abs(x[0][1] - x[3][1]);
+			}
+			System.out.println(l*b);
+		}
+	}
+}
