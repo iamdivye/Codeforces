@@ -1,0 +1,27 @@
+import java.util.*;
+public class Rook 
+{
+	public static void main(String[] args) 
+	{
+		int i , j, k, l, m;
+		String s,c,v;
+		Scanner in = new Scanner(System.in);
+		int t = in.nextInt();
+		for(i=0;i<t;i++)
+		{
+			s = in.next();
+			c = s.substring(0, 1);
+			v = s.substring(1);
+			k = 97;
+			for(j=1;j<=8;j++)
+			{
+				if(j != Integer.parseInt(v))
+					System.out.println(c+j);
+				s = ""+(char)k;
+				if(!c.equals(s))
+					System.out.println((char)k+v);
+				k++;
+			}
+		}
+	}
+}
