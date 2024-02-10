@@ -1,0 +1,18 @@
+import java.util.*;
+public class DoorsAndKeys 
+{
+	public static void main(String[] args) 
+	{
+		Scanner in = new Scanner(System.in);
+		int t = in.nextInt();
+		String R,r,g,G,B,b,k;
+		for(int i=0;i<t;i++)
+		{
+			k=in.next();
+			if((k.indexOf('R')>k.indexOf('r')) && (k.indexOf('G')>k.indexOf('g')) && (k.indexOf('B')>k.indexOf('b')))
+				System.out.println("YES");
+			else
+				System.out.println("NO");				
+		}
+	}
+}
