@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class TwoRabbits 
+{
+	public static void main(String[] args) 
+	{
+		Scanner in = new Scanner(System.in);
+		int t = in.nextInt();
+		int x,y,a,b;
+		for(int i=0;i<t;i++)
+		{
+			x = in.nextInt();
+			y = in.nextInt();
+			a = in.nextInt();
+			b = in.nextInt();
+			x=y-x;
+			a=a+b;
+			y=x%a;
+			b=x/a;
+			if(y == 0)
+			System.out.println(b);
+			else
+				System.out.println(-1);				
+		}
+	}
+}
