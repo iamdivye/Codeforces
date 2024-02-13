@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class VanyaAndFence 
+{
+	public static void main(String[] args) 
+	{
+		Scanner in = new Scanner(System.in);
+		int x,a,b=0;
+		int n = in.nextInt();
+		int h = in.nextInt();
+		for(x=0;x<n;x++)
+		{
+			a=in.nextInt();
+			if(a>h)
+				b+=2;
+			else
+				b+=1;
+		}
+		System.out.println(b);
+	}
+}
