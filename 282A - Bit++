@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Bit 
+{
+	public static void main(String[] args) 
+	{
+		Scanner in = new Scanner(System.in);
+		int x,b=0;
+		int n = in.nextInt();
+		for(x=0;x<n;x++)
+		{
+			String h = in.next();
+			if(h.charAt(0) == '+' || h.charAt(2) == '+')
+				b+=1;
+			else
+				b-=1;
+		}
+		System.out.println(b);
+	}
+}
