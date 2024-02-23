@@ -1,0 +1,27 @@
+import java.util.*;
+public class HonestCoach 
+{
+	public static void main(String[] args) 
+    {
+		Scanner in = new Scanner(System.in);
+	    int a = in.nextInt();
+	    int K=0,k,j,i,min;
+	    for(j=0;j<a;j++)
+	    {
+	    	k = in.nextInt();
+	    	int[] b= new int[k];
+	    	for(i=0;i<k;i++)
+		    	b[i] = in.nextInt();
+	    	K=Math.abs(b[0]-b[1]);
+	    	Arrays.sort(b);
+	    	for(i=0;i<k-1;i++)
+	    	{
+	    		if(Math.abs(b[i]-b[i+1]) < K)
+	    		{
+	    			K = Math.abs(b[i]-b[i+1]);
+	    		}
+	    	}
+	    	System.out.println(K);
+	    }
+	}
+}
