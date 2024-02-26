@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class RequiredRemainder 
+{
+	public static void main(String[] args) 
+    {
+		int s=0,i,b,c,d;
+		Scanner sc = new Scanner(System.in);
+	    int a = sc.nextInt();
+	    for (i = 0; i < a; i++) 
+	    {
+	           b = sc.nextInt();
+	           c = sc.nextInt();
+	           d = sc.nextInt();
+	           s = d%b;
+	           if(s == c)
+	        	   System.out.println(d);
+	           else if(s>c)
+	           {
+	        	   System.out.println(d-(s-c));
+	           }
+	           else
+	        	   System.out.println(d-s-(b-c));
+	    }
+	}
+}
