@@ -1,0 +1,26 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class EqualCandies {
+
+	public static void main(String[] args) 
+	{
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		int[] x;
+		int a,b,c;
+		for(int i=0;i<n;i++)
+		{
+			a = in.nextInt();
+			x = new int[a];
+			for(b=0;b<a;b++)
+			{
+				x[b] = in.nextInt();
+			}
+			c = a*Arrays.stream(x).min().getAsInt();
+			System.out.println(Arrays.stream(x).sum()-c);
+		}
+
+	}
+
+}
