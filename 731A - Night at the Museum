@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class NightAtTheMuseum {
+
+	public static void main(String[] args) 
+	{
+        Scanner in = new Scanner(System.in);
+        String n = in.next();
+        int m = cal(n);
+        System.out.println(m);
+    }
+
+    private static int cal(String n)
+    {
+        char c = 'a';
+        int t = 0;
+        for (char l : n.toCharArray()) 
+        {
+            int cl = Math.abs(l - c);
+            int co = 26 - cl;
+            t += Math.min(cl, co);
+            c = l;
+        }
+        return t;
+    }
+
+}
