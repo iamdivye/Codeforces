@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Colourblindness {
+
+	public static void main(String[] args) 
+	{
+		int i,k,x=0,c,d;
+		String a,b;
+		char y,z;
+		Scanner in = new Scanner(System.in);
+		int n= in.nextInt();
+		for(i=0;i<n;i++)
+		{
+			x=0;
+			c=in.nextInt();
+			a=in.next();
+			b=in.next();
+			for(k=0;k<c;k++)
+			{
+				y=a.charAt(k);
+				z=b.charAt(k);
+				if((y == 'R' && z != 'R') || (z == 'R' && y != 'R'))
+					x++;
+			}
+			if(x == 0)
+				System.out.println("YES");
+			else
+				System.out.println("NO");
+		}
+	}
+
+}
