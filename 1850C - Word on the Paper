@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class WordOnThePaper {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+	    int a = in.nextInt();
+	    int x,y;
+	    String s,ch="";
+	    for(int i=0;i<a;i++)
+	    {
+	    	s="";
+	    	for(x=0;x<8;x++)
+	    	{
+	    		ch=in.next();
+	    		for(y=0;y<8;y++)
+	    		{
+	    			if(ch.charAt(y) != '.')
+	    				s=s+ch.charAt(y);
+	    		}
+	    	}
+	    	System.out.println(s);
+	    }
+	}
+
+}
