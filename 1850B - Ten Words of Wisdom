@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class TenWordsOfWisdom {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+	    int a = in.nextInt();
+	    int x,y,h=10,v=0,c,b,z;
+	    boolean f;
+	    for(int i=0;i<a;i++)
+	    {
+	    	c=in.nextInt();z=0;f=false;
+	    	for(b=0;b<c;b++)
+	    	{
+	    		x=in.nextInt();
+		    	y=in.nextInt();
+		    	if(b==z)
+		    	{
+		    		if(x<=10)
+		    		{
+		    			h=b;v=y;
+		    			f=true;
+		    		}
+		    		else
+		    			z+=1;
+		    	}
+		    	if(x<=10 && y>v && f)
+		    	{
+		    		v=y;
+		    		h=b;
+		    	}
+	    	}
+	    	System.out.println(h+1);
+	    }
+
+	}
+
+}
