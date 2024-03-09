@@ -1,0 +1,38 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Triple {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+	    int a = in.nextInt();
+	    int x,y,h=10,v=0,c,b;
+	    int[] z;
+	    boolean f;
+	    for(int i=0;i<a;i++)
+	    {
+	    	x=in.nextInt();
+	    	z= new int[x];
+	    	for(y=0;y<x;y++)
+	    	{
+	    		z[y] = in.nextInt();
+	    	}
+	    	Arrays.sort(z);
+	    	System.out.println(cc(z));
+	    }
+	}
+	    public static int cc(int[] z) 
+	    {
+	    	int k=1;
+	    	for (int i=0;i<z.length-1;i++) 
+	    	{
+	    		if(z[i] == z[i+1])
+	    			k++;
+	    		else
+	    			k=1;
+	    		if(k==3)
+	    			return z[i];
+	    	}
+	    	return -1;
+	    }
+}
