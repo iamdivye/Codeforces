@@ -1,0 +1,17 @@
+    import java.util.Scanner;
+     
+    public class MakeItWhite {
+     
+    	public static void main(String[] args) {
+    		Scanner in = new Scanner(System.in);
+    	    int a = in.nextInt(),z;
+    	    String s;
+    	    for(int i=0;i<a;i++)
+    	    {
+    	    	z=in.nextInt();
+    	    	s=in.next();
+    	    	System.out.println(s.lastIndexOf('B')-s.indexOf('B')+1);
+    	    }
+    	}
+     
+    }
