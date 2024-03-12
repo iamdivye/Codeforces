@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class GameWithIntegers {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+	    int a = in.nextInt(),z;
+	    String s;
+	    for(int i=0;i<a;i++)
+	    {
+	    	z=in.nextInt();
+	    	if(z%3 == 0)
+	    		System.out.println("Second");
+	    	else
+	    		System.out.println("First");
+	    }
+	}
+
+}
