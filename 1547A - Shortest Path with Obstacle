@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class ShortestPathWithObstacle {
+
+	public static void main(String[] args) 
+	{
+        Scanner scanner = new Scanner(System.in);
+        int t = scanner.nextInt();
+        for (int i = 0; i < t; i++) {
+            scanner.nextLine();
+            int xA = scanner.nextInt();
+            int yA = scanner.nextInt();
+            int xB = scanner.nextInt();
+            int yB = scanner.nextInt();
+            int xF = scanner.nextInt();
+            int yF = scanner.nextInt();
+            int shortestPath = calculateShortestPath(xA, yA, xB, yB, xF, yF);
+            System.out.println(shortestPath);
+        }
+    }
+    public static int calculateShortestPath(int xA, int yA, int xB, int yB, int xF, int yF) 
+    {
+        int manhattanDistance = Math.abs(xA - xB) + Math.abs(yA - yB);
+        if ((xA == xB && xB == xF && ((yA < yF && yF < yB) || (yB < yF && yF < yA))) || (yA == yB && yB == yF && ((xA < xF && xF < xB) || (xB < xF && xF < xA)))) 
+        {
+            return manhattanDistance + 2;
+        }
+        else 
+        {
+            return manhattanDistance;
+        }
+    }
+}
