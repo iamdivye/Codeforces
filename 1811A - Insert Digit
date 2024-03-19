@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class InsertDigit {
+
+	public static void main(String[] args) 
+	{
+		Scanner in = new Scanner(System.in);
+        int t = in.nextInt(),k,j,l,m,n;
+        String s;
+        char c;
+        for (int i = 0; i < t; i++) 
+        {
+        	l=in.nextInt();
+        	m=in.nextInt();
+        	k=0;
+        	s=in.next();
+        	for(j=0;j<l;j++)
+        	{
+        		c=s.charAt(j);
+        		n=Integer.parseInt(""+c);
+        		if(j==0 && m>n)
+        		{
+        			s=m+s;
+        			k=1;
+        			break;
+        		}
+        		else if(m>n && j != 0)
+        		{
+        			s = s.substring(0,j)+m+s.substring(j);
+        			k=1;
+        			break;
+        		}
+        			
+        	}
+        	if(k==0)
+        		s=s+m;
+        	System.out.println(s);
+        }
+	}
+
+}
