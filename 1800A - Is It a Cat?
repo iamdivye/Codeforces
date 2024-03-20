@@ -1,0 +1,57 @@
+import java.util.Scanner;
+public class IsItACat 
+{
+	    public static void main(String[] args) {
+	        Scanner in = new Scanner(System.in);
+	        int t = in.nextInt(); 
+	        for (int i = 0; i < t; i++) 
+	        {
+	            int n = in.nextInt();
+	            String s = in.next();
+	            if(n >= 4)
+	            {
+	            	String result = checkMeowing(s) ? "YES" : "NO";
+		            System.out.println(result);
+	            }
+	            else
+	            	System.out.println("NO");
+	        }
+	    }
+	    public static boolean checkMeowing(String s) 
+	    {
+	    	int i,j,k,l,a=0,b=0,c=0,d=0;
+	    	s=s.toLowerCase();
+	        for(i=0;i<s.length();i++)
+	        {
+	        	if(s.charAt(i) == 'm')
+	        		a++;
+	        	else 
+	        		break;
+	        }
+	        for(j=i;j<s.length();j++)
+	        {
+	        	if(s.charAt(j) == 'e')
+	        		b++;
+	        	else
+	        		break;
+	        }
+	        for(k=j;k<s.length();k++)
+	        {
+	        	if(s.charAt(k) == 'o')
+	        		c++;
+	        	else
+	        		break;
+	        }
+	        for(l=k;l<s.length();l++)
+	        {
+	        	if(s.charAt(l) == 'w')
+	        		d++;
+	        	else
+	        		break;
+	        }
+	        if((a+b+c+d) == s.length() && (a >= 1) && b>=1 && c>=1 && d >=1)
+	        	return true;
+	        else
+	        	return false;
+	    }
+	}
