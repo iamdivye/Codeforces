@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class AleksaAndStack {
+
+	public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int t = in.nextInt(),i,n,a,d; 
+        for (i = 0; i < t; i++) 
+        {
+            n = in.nextInt();
+            a=1;
+            for(d=1;d<n;d++)
+            {
+            	System.out.print(a+" ");
+            	a+=2;
+            }
+            if(n != 0)
+            	System.out.println(a);
+        }
+	}
+
+}
