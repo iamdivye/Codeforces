@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class PoliceRecruits {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+        int m,j,k,l,n; 
+        k=0;l=0;
+        n = in.nextInt();
+        for(j=0;j<n;j++)
+        {
+        	m=in.nextInt();
+        	if(m == -1 && k == 0)
+        		l++;
+        	else if(m == -1)
+        		k--;
+        	else 
+        		k+=m;
+        }
+        System.out.println(l);
+
+	}
+
+}
