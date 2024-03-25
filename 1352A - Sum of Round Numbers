@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class SumOfRoundNumbers 
+{
+	public static void main(String[] args) 
+	{
+		int i,k=0;
+		Scanner in = new Scanner(System.in);
+		int n= in.nextInt();
+		int a,b,c;
+		String d;
+		for(i=0;i<n;i++)
+		{
+			k=1;d="";c=0;
+			a=in.nextInt();
+			while(a>0)
+			{
+				b=a%10;
+				if(b!=0)
+				{
+					d=d+" " +b*k;
+					c++;
+				}
+				k*=10;
+				a/=10;
+			}
+			System.out.println(c);
+			System.out.println(d.trim());
+		}
+		
+	}
+}
