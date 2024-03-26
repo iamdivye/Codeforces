@@ -1,0 +1,18 @@
+import java.util.*;
+public class VanyaAndCubes 
+{
+	public static void main(String[] args) 
+	{
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		int t=0,k=0;
+		for(int i=1;n>0;i++)
+		{
+			t+=i;n-=t;k++;
+		}
+		if(n==0)
+			System.out.println(k);
+		else
+			System.out.println(k-1);
+	}
+}
