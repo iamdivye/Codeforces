@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class DislikeOfThrees
+{
+	public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int t = in.nextInt();
+        for (int i = 0; i < t; i++) 
+        {
+            int k = in.nextInt();
+            int count = 0;
+            int x = 1;
+            while (count < k) {
+                if (x % 3 != 0 && x % 10 != 3) {
+                    count++;
+                }
+                x++;
+            }
+            System.out.println(x - 1);
+        }
+    }
+}
