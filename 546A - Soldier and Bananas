@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class SoldierAndBananas 
+{
+	public static void main(String[] args) 
+	{
+	  	int i,b=0;
+		Scanner in = new Scanner(System.in);
+	    int k = in.nextInt();
+	    int n = in.nextInt();
+	    int w = in.nextInt();
+	    for(i=1;i<=w;i++)
+	    {
+	    	b+=k*i;
+	    }
+		if(b-n >= 0)
+	    System.out.println(b-n);
+		else
+		System.out.println(0);
+	 }
+}
