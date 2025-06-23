@@ -1,0 +1,22 @@
+import java.util.*;
+public class ABAgain {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int t = scanner.nextInt();
+        for(int i=0;i<t;i++)
+        {
+        	int number = scanner.nextInt();
+        	int sum = 0;
+            int originalNumber = number; 
+            
+            while (number != 0) {
+                int digit = number % 10;
+                sum += digit;
+                number /= 10;
+            }
+            
+            System.out.println(sum);
+        }
+    }
+}
